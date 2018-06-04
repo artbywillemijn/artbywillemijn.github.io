@@ -1,0 +1,6 @@
+name: "Art by Willemijn"
+description: "Art by Willemijn"
+baseurl: "https://www.artbywillemijn.com/"
+future: false
+markdown: kramdown
+permalink: pretty
