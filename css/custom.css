@@ -10,6 +10,16 @@ h6 {
 .container {
   /* max-width: 800px; */
 }
+.dbg {
+  background: black;
+  padding: 50px;
+  color: white;
+}
+.wbg {
+  background: white;
+  padding: 50px;
+  color: black;
+}
 .header {
   margin-top: 2rem;
   text-align: center; }
@@ -156,6 +166,8 @@ img.blog {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
+  padding-left: 50px;
+  padding-right: 50px;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
