@@ -1,6 +1,38 @@
 ---
 title: Art by Willemijn
 layout: main
+images:
+    - /img/new_web_res/20180721-DSCF7655.jpg
+    - /img/new_web_res/20180721-DSCF7656.jpg
+    - /img/new_web_res/20180721-DSCF7657.jpg
+    - /img/new_web_res/20180721-DSCF7658.jpg
+    - /img/new_web_res/20180721-DSCF7661.jpg
+    - /img/new_web_res/20180721-DSCF7667.jpg
+    - /img/new_web_res/20180721-DSCF7670.jpg
+    - /img/new_web_res/20180721-DSCF7671.jpg
+    - /img/new_web_res/20180721-DSCF7672.jpg
+    - /img/new_web_res/20180721-DSCF7675.jpg
+    - /img/new_web_res/20180721-DSCF7678.jpg
+    - /img/new_web_res/20180721-DSCF7679.jpg
+    - /img/new_web_res/20180721-DSCF7681.jpg
+    - /img/new_web_res/20180721-DSCF7685.jpg
+    - /img/new_web_res/20180721-DSCF7686.jpg
+    - /img/new_web_res/20180721-DSCF7688.jpg
+    - /img/new_web_res/20180721-DSCF7689.jpg
+    - /img/new_web_res/20180721-DSCF7690.jpg
+    - /img/new_web_res/20180721-DSCF7691.jpg
+    - /img/new_web_res/20180721-DSCF7692.jpg
+    - /img/new_web_res/20180721-DSCF7693.jpg
+    - /img/new_web_res/20180721-DSCF7695.jpg
+    - /img/new_web_res/20180721-DSCF7697.jpg
+    - /img/new_web_res/20180721-DSCF7699.jpg
+    - /img/new_web_res/20180721-DSCF7700.jpg
+    - /img/new_web_res/20180721-DSCF7701.jpg
+    - /img/new_web_res/20180721-DSCF7703.jpg
+    - /img/new_web_res/20180804-DSCF7719.jpg
+    - /img/new_web_res/20180804-DSCF7720.jpg
+    - /img/new_web_res/20180804-DSCF7721.jpg
+    - /img/new_web_res/20180804-DSCF7722.jpg
 ---
 
 <div class="row dbg">
@@ -23,11 +55,19 @@ layout: main
 			<p>ABOUT ME</p>
 		</div>
 		<div class="nine columns">
-			<p>I strive to indulge my imagination and feed my creativity in my home studio where I have been painting since years....</p>
+			<p>Ever since I was a little girl, I was surrounded by art; my mom painted, my aunts painted and for as long as I can remember; I painted. This all under the influence of my dad’s love for classical music.</p>
 
-			<p>With a mom and several creative sisters and aunts it seems that paint runs in our veins!</p>
+			<p>I grew up in Africa and the Netherlands, always painting, throughout all my school years.</p>
 
-			<p>As a Dutch artist based in Switzerland I have access to the most beautiful surroundings and a large artist community in both the French part and the German part of Switzerland.</p>
+			<p>My mom had expositions and was selling and was always covered in paint. She was always on her way to learn some more techniques or to another expo and taught me how to paint.</p>
+
+			<p>After travelling around the world, and gazing upon the nightsky of Australia for many months, I finally settled in Switzerland and picked up painting again after a few years of pause.</p>
+
+			<p>I started small, but always abstract, and I continued with bigger and bigger canvases and ventured in the world of nightskies.</p>
+
+			<p>And if I am not painting I am either horseriding, scubadiving or reading many books.</p>
+
+			<p>I’ve had expositions in the French part of Switzerland, as I lived in Lausanne for 6 years. Right now I have settled in a small village in Baselland and will continue to explore art and expo's throughout the world.</p>
 		</div>
 	</div>
 </div>
@@ -45,108 +85,19 @@ layout: main
 
 <div class="wbg">
 	<div class="row">
+		{% for image in page.images %}
 		<div class="three columns">
-			<img class="u-max-full-width" src="/img/1.jpg" />
+			<img id="image_for_modal" onclick="javascript:showModal('{{ image }}');" class="u-max-full-width" alt="{{ name }}" src="{{ image }}" >
 		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/2.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/3.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/4.jpg" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/5.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/6.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/7.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/8.jpg" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/9.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/10.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/11.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/12.jpg" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/13.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/14.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/15.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/16.jpg" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/17.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/18.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/20.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/21.jpg" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/22.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/23.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/24.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/25.jpg" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/green_day.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/radiowaves.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/small_green_nebula.jpg" />
-		</div>
-		<div class="three columns">
-			<img class="u-max-full-width" src="/img/small_red_nebula.jpg" />
-		</div>
+		{% endfor %}
 	</div>
 </div>
 
+<!-- modal -->
+<div id="modal-container" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="modal_img">
+	<div id="caption"></div>
+</div> 
+
+<script src="js/modal.js"></script>
