@@ -8,4 +8,4 @@ current_wp
 chromedriver
 bin/db
 bin/logs
-_new_full_res
+_new_full_res/
