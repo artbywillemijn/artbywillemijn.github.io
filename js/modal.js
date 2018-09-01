@@ -6,7 +6,9 @@ var captionText = document.getElementById("caption");
 function showModal( src,alt ) {
     modal.style.display = "block";
     modalImg.src = src;
-    captionText.innerHTML = alt;
+	if ( alt != undefined ) {
+    	captionText.innerHTML = alt;
+	}
 }
 
 // Get the <span> element that closes the modal

@@ -4,35 +4,36 @@ layout: main
 images:
     - /img/new_web_res/20180721-DSCF7655.jpg
     - /img/new_web_res/20180721-DSCF7656.jpg
+    - /img/new_web_res/20180721-DSCF7671.jpg
+    - /img/new_web_res/20180721-DSCF7667.jpg
     - /img/new_web_res/20180721-DSCF7657.jpg
     - /img/new_web_res/20180721-DSCF7658.jpg
     - /img/new_web_res/20180721-DSCF7661.jpg
-    - /img/new_web_res/20180721-DSCF7667.jpg
     - /img/new_web_res/20180721-DSCF7670.jpg
-    - /img/new_web_res/20180721-DSCF7671.jpg
     - /img/new_web_res/20180721-DSCF7672.jpg
-    - /img/new_web_res/20180721-DSCF7675.jpg
+    - /img/new_web_res/20180721-DSCF7690.jpg
     - /img/new_web_res/20180721-DSCF7678.jpg
     - /img/new_web_res/20180721-DSCF7679.jpg
     - /img/new_web_res/20180721-DSCF7681.jpg
     - /img/new_web_res/20180721-DSCF7685.jpg
     - /img/new_web_res/20180721-DSCF7686.jpg
-    - /img/new_web_res/20180721-DSCF7688.jpg
+    - /img/new_web_res/20180721-DSCF7675.jpg
     - /img/new_web_res/20180721-DSCF7689.jpg
-    - /img/new_web_res/20180721-DSCF7690.jpg
-    - /img/new_web_res/20180721-DSCF7691.jpg
     - /img/new_web_res/20180721-DSCF7692.jpg
     - /img/new_web_res/20180721-DSCF7693.jpg
+    - /img/new_web_res/20180721-DSCF7688.jpg
+    - /img/new_web_res/20180721-DSCF7691.jpg
     - /img/new_web_res/20180721-DSCF7695.jpg
     - /img/new_web_res/20180721-DSCF7697.jpg
-    - /img/new_web_res/20180721-DSCF7699.jpg
-    - /img/new_web_res/20180721-DSCF7700.jpg
-    - /img/new_web_res/20180721-DSCF7701.jpg
     - /img/new_web_res/20180721-DSCF7703.jpg
     - /img/new_web_res/20180804-DSCF7719.jpg
     - /img/new_web_res/20180804-DSCF7720.jpg
     - /img/new_web_res/20180804-DSCF7721.jpg
     - /img/new_web_res/20180804-DSCF7722.jpg
+last_images:
+    - /img/new_web_res/20180721-DSCF7699.jpg
+    - /img/new_web_res/20180721-DSCF7700.jpg
+    - /img/new_web_res/20180721-DSCF7701.jpg
 ---
 
 <div class="row dbg">
@@ -84,9 +85,22 @@ images:
 </div>
 
 <div class="wbg">
+	{% for image in page.images %}
+		{% assign i = forloop.index | modulo: 4 %}
+		{% if i == 1 %}
+		<div class="row">
+		{% endif %}
+			<div class="three columns">
+				<img id="image_for_modal" onclick="javascript:showModal('{{ image }}');" class="u-max-full-width" alt="{{ name }}" src="{{ image }}" >
+			</div>
+		{% if i == 0 %}
+		</div>
+		{% endif %}
+	{% endfor %}
+
 	<div class="row">
-		{% for image in page.images %}
-		<div class="three columns">
+		{% for image in page.last_images %}
+		<div class="four columns">
 			<img id="image_for_modal" onclick="javascript:showModal('{{ image }}');" class="u-max-full-width" alt="{{ name }}" src="{{ image }}" >
 		</div>
 		{% endfor %}
