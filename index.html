@@ -27,10 +27,10 @@ images:
     - /img/new_web_res/20180804-DSCF7720.jpg,Uecarro,24x30cm
     - /img/new_web_res/20180804-DSCF7721.jpg,Dedjuna,24x30cm
     - /img/new_web_res/20180804-DSCF7722.jpg,Sosiki,24x30cm
-last_images:
     - /img/new_web_res/20180721-DSCF7699.jpg,Ifva Dorthore,3x 30x40cm
     - /img/new_web_res/20180721-DSCF7700.jpg,Ifva Dorthore,3x 30x40cm
     - /img/new_web_res/20180721-DSCF7701.jpg,Ifva Dorthore,3x 30x40cm
+last_images:
 ---
 
 <div class="row dbg">
@@ -91,19 +91,21 @@ last_images:
 			<div class="three columns">
 				<img id="image_for_modal" onclick="javascript:showModal('{{ image[0] }}','{{ image[1] }}','{{ image[2] }}');" class="u-max-full-width" alt="{{ image[1] }}" src="{{ image[0] }}" >
 			</div>
-		{% if i == 0 %}
+		{% if i == 0 or forloop.last == true %}
 		</div>
 		{% endif %}
 	{% endfor %}
 
-	<div class="row">
-		{% for image_and_name in page.last_images %}
-		{% assign image = image_and_name | split: "," %}
-		<div class="four columns">
-			<img id="image_for_modal" onclick="javascript:showModal('{{ image[0] }}','{{ image[1] }}','{{ image[2] }}');" class="u-max-full-width" alt="{{ image[1] }}" src="{{ image[0] }}" >
+	{% if pages.last_images.size  > 10 %}
+		<div class="row">
+			{% for image_and_name in page.last_images %}
+			{% assign image = image_and_name | split: "," %}
+			<div class="four columns">
+				<img id="image_for_modal" onclick="javascript:showModal('{{ image[0] }}','{{ image[1] }}','{{ image[2] }}');" class="u-max-full-width" alt="{{ image[1] }}" src="{{ image[0] }}" >
+			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
-	</div>
+	{% end %}
 </div>
 
 <!-- modal -->

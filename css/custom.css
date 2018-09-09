@@ -3,15 +3,29 @@ body {
 .container {
   /* max-width: 800px; */
 }
-.dbg {
-  background: black;
-  padding: 50px;
-  color: white;
+@media (min-width: 100px) {
+	.dbg {
+	  background: black;
+	  padding: 10px;
+	  color: white;
+	}
+	.wbg {
+	  background: white;
+	  padding: 10px;
+	  color: black;
+	}
 }
-.wbg {
-  background: white;
-  padding: 50px;
-  color: black;
+@media (min-width: 400px) {
+	.dbg {
+	  background: black;
+	  padding: 50px;
+	  color: white;
+	}
+	.wbg {
+	  background: white;
+	  padding: 50px;
+	  color: black;
+	}
 }
 .expo_bg {
   background-size: cover;

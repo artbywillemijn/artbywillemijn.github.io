@@ -50,14 +50,29 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
-.inner_container {
-  position: relative;
-  width: 80%;
-  /* max-width: 960px; */
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+
+@media (min-width: 100px) {
+	.inner_container {
+	  position: relative;
+	  width: 100%;
+	  /* max-width: 960px; */
+	  margin: 0 auto;
+	  padding: 0 20px;
+	  box-sizing: border-box;
+	}
 }
+
+@media (min-width: 400px) {
+	.inner_container {
+	  position: relative;
+	  width: 80%;
+	  /* max-width: 960px; */
+	  margin: 0 auto;
+	  padding: 0 20px;
+	  box-sizing: border-box;
+	}
+}
+
 .column,
 .columns {
   width: 100%;
