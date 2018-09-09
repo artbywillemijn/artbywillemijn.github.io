@@ -3,11 +3,15 @@ var modal       = document.getElementById('modal-container');
 var modalImg    = document.getElementById("modal_img");
 var captionText = document.getElementById("caption");
 
-function showModal( src,alt ) {
+function showModal( src,alt,size ) {
     modal.style.display = "block";
     modalImg.src = src;
 	if ( alt != undefined ) {
-    	captionText.innerHTML = alt;
+		if ( size != undefined ) { 
+    		captionText.innerHTML = alt + " / " + size;
+		} else {
+	    	captionText.innerHTML = alt;
+		}
 	}
 }
 
